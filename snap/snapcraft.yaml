@@ -1,0 +1,29 @@
+title: year-progress
+name: year-progress
+base: core24
+version: '0.0.1'
+summary: Year Progress
+contact: ivofernandes12@gmail.com
+donation: https://www.paypal.com/donate/?hosted_button_id=EZUYCD4ANT4RA
+issues: https://github.com/ivoxavier/year-progress/issues
+website: https://github.com/ivoxavier/year-progress/
+license: GPL-3.0-only
+description: |
+  A super fast application built with Vala and GTK4 for GNOME that shows you the exact percentage of the year that has already passed in real time.
+
+grade: stable
+confinement: strict 
+
+apps:
+  year-progress:
+    command: usr/bin/year-progress
+    extensions: [gnome]
+
+parts:
+  year-progress:
+    plugin: meson
+    source: .
+    build-packages:
+      - valac
+      - libgtk-4-dev
+      - gettext
