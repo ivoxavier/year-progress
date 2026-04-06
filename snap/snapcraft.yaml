@@ -23,6 +23,8 @@ parts:
   year-progress:
     plugin: meson
     source: .
+    meson-parameters:
+      - --prefix=/usr
     build-packages:
       - valac
       - libgtk-4-dev
