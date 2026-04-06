@@ -18,6 +18,7 @@ apps:
   year-progress:
     command: usr/bin/year-progress
     extensions: [gnome]
+    desktop: usr/share/applications/year-progress.desktop
 
 parts:
   year-progress:
