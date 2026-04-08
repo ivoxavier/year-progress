@@ -13,12 +13,12 @@ description: |
 
 grade: stable
 confinement: strict 
-icon: snap/gui/year-progress.svg
 
 apps:
   year-progress:
     command: usr/bin/year-progress
     extensions: [gnome]
+    desktop: usr/share/applications/year-progress.desktop
     
 
 parts:
