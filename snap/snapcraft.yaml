@@ -1,10 +1,9 @@
 title: year-progress
 name: year-progress
 base: core24
-version: '0.0.1'
+version: '0.0.2'
 summary: Year Progress
 contact: ivofernandes12@gmail.com
-donation: https://www.paypal.com/donate/?hosted_button_id=EZUYCD4ANT4RA
 issues: https://github.com/ivoxavier/year-progress/issues
 website: https://github.com/ivoxavier/year-progress/
 license: GPL-3.0-only
@@ -18,7 +17,8 @@ apps:
   year-progress:
     command: usr/bin/year-progress
     extensions: [gnome]
-    
+    common-id: year-progress.desktop 
+    desktop: meta/gui/year-progress.desktop 
 
 parts:
   year-progress:
@@ -30,3 +30,11 @@ parts:
       - valac
       - libgtk-4-dev
       - gettext
+    override-build: |
+      craftctl default 
+      
+      mkdir -p $CRAFT_PART_INSTALL/meta/gui
+      cp $CRAFT_PART_SRC/data/year-progress.desktop $CRAFT_PART_INSTALL/meta/gui/
+      cp $CRAFT_PART_SRC/data/year-progress.svg $CRAFT_PART_INSTALL/meta/gui/
+      
+      sed -i 's|^Icon=.*|Icon=${SNAP}/meta/gui/year-progress.svg|g' $CRAFT_PART_INSTALL/meta/gui/year-progress.desktop
