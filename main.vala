@@ -2,6 +2,7 @@ using Gtk;
 using GLib;
 
 int main (string[] args) {
+    GLib.Environment.set_prgname ("year-progress");
     Intl.setlocale (LocaleCategory.ALL, "");
     Intl.bindtextdomain ("year-progress", "/usr/share/locale");
     Intl.bind_textdomain_codeset ("year-progress", "UTF-8");

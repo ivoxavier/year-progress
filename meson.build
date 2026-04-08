@@ -19,10 +19,8 @@ install_data('data/year-progress.desktop',
 )
 
 install_data('data/year-progress.svg',
-    rename: 'year-progress.svg',
     install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
 )
-
 
 i18n = import('i18n')
 subdir('po')
