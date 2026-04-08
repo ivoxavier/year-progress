@@ -14,11 +14,11 @@ executable('year-progress',
     install: true
 )
 
-install_data('data/year-progress.desktop',
+install_data('data/com.ixsvf.yearprogress.desktop',
     install_dir: get_option('datadir') / 'applications'
 )
 
-install_data('data/year-progress.svg',
+install_data('data/com.ixsvf.yearprogress.svg',
     install_dir: get_option('datadir') / 'icons' / 'hicolor' / 'scalable' / 'apps'
 )
 

@@ -8,7 +8,7 @@ int main (string[] args) {
     Intl.bind_textdomain_codeset ("year-progress", "UTF-8");
     Intl.textdomain ("year-progress");
 
-    var app = new Gtk.Application (null, ApplicationFlags.NON_UNIQUE);
+    var app = new Gtk.Application ("com.ixsvf.yearprogress", ApplicationFlags.NON_UNIQUE);
     
     app.activate.connect (() => {
         var window = new Gtk.ApplicationWindow (app);
