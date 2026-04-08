@@ -2,7 +2,8 @@
 Name=Year Progress
 Comment=Check the year progress
 Exec=year-progress
-Icon=year-progress
+Icon=/snap/year-progress/current/usr/share/icons/hicolor/scalable/apps/year-progress.svg
 Terminal=false
 Type=Application
 Categories=Utility;TimeTools;
+StartupWMClass=year-progress
