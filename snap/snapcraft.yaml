@@ -6,7 +6,9 @@ summary: Year Progress
 contact: ivofernandes12@gmail.com
 issues: https://github.com/ivoxavier/year-progress/issues
 website: https://github.com/ivoxavier/year-progress/
+icon: data/com.ixsvf.yearprogress.svg
 license: GPL-3.0-only
+donation: https://www.paypal.com/donate/?hosted_button_id=EZUYCD4ANT4RA
 description: |
   A super fast application built with Vala and GTK4 for GNOME.
 
