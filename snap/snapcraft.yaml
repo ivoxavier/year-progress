@@ -1,7 +1,7 @@
 title: year-progress
 name: year-progress
 base: core24
-version: '0.0.5'
+version: '0.0.6'
 summary: Year Progress
 contact: ivofernandes12@gmail.com
 issues: https://github.com/ivoxavier/year-progress/issues
@@ -48,3 +48,4 @@ parts:
       
       
       sed -i 's|^Icon=.*|Icon=${SNAP}/meta/gui/com.ixsvf.yearprogress.svg|g' $CRAFT_PART_INSTALL/meta/gui/com.ixsvf.yearprogress.desktop
+      rm -f $CRAFT_PART_INSTALL/usr/share/applications/com.ixsvf.yearprogress.desktop
