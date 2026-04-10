@@ -1,7 +1,7 @@
 title: year-progress
 name: year-progress
 base: core24
-version: '0.0.6'
+version: '0.0.7'
 summary: Year Progress
 contact: ivofernandes12@gmail.com
 issues: https://github.com/ivoxavier/year-progress/issues
@@ -43,11 +43,13 @@ parts:
       
       craftctl default
       
-      
       mkdir -p $CRAFT_PART_INSTALL/meta/gui
-      cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.desktop $CRAFT_PART_INSTALL/meta/gui/
-      cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.svg $CRAFT_PART_INSTALL/meta/gui/
+  
+      cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.desktop $CRAFT_PART_INSTALL/meta/gui/year-progress.desktop
+      cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.svg $CRAFT_PART_INSTALL/meta/gui/com.ixsvf.yearprogress.svg
       
+    
+      sed -i 's|^Icon=.*|Icon=${SNAP}/meta/gui/com.ixsvf.yearprogress.svg|g' $CRAFT_PART_INSTALL/meta/gui/year-progress.desktop
       
-      sed -i 's|^Icon=.*|Icon=${SNAP}/meta/gui/com.ixsvf.yearprogress.svg|g' $CRAFT_PART_INSTALL/meta/gui/com.ixsvf.yearprogress.desktop
-      rm -f $CRAFT_PART_INSTALL/usr/share/applications/com.ixsvf.yearprogress.desktop
+     
+      rm -f $CRAFT_PART_INSTALL/usr/share/applications/*.desktop
