@@ -54,13 +54,15 @@ int main (string[] args) {
             double center_y = height / 2.0;
             double line_width = 18.0;
             double radius = double.min (width, height) / 2.0 - (line_width / 2.0);
-            
 
-            Gdk.RGBA accent_color;
-            var context = area.get_style_context ();
             
+            Gdk.RGBA accent_color;
+            
+          
+            var context = area.get_style_context ();
             if (!context.lookup_color ("accent_bg_color", out accent_color)) {
-                accent_color.parse ("#e95420"); 
+             
+                accent_color.parse ("#e95420");
             }
 
             cr.set_line_width (line_width);
@@ -71,8 +73,8 @@ int main (string[] args) {
             cr.arc (center_x, center_y, radius, 0, 2 * Math.PI);
             cr.stroke ();
 
-            Gdk.Cairo.set_source_rgba (cr, accent_color);
-            
+    
+            cr.set_source_rgba (accent_color.red, accent_color.green, accent_color.blue, 1.0);
             
             double start_angle = -Math.PI / 2.0;
             double end_angle = start_angle + (animated_percentage * 2 * Math.PI);
