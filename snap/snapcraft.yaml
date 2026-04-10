@@ -26,7 +26,7 @@ apps:
     command: usr/bin/year-progress
     extensions: [gnome]
     common-id: com.ixsvf.yearprogress.desktop
-    desktop: meta/gui/com.ixsvf.yearprogress.desktop 
+    desktop: meta/gui/com.ixsvf.year-progress.desktop 
     slots: [dbus-year-progress]
 
 parts:
