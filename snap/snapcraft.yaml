@@ -26,7 +26,7 @@ apps:
     command: usr/bin/year-progress
     extensions: [gnome]
     common-id: com.ixsvf.yearprogress.desktop
-    desktop: meta/gui/com.ixsvf.year-progress.desktop 
+    desktop: meta/gui/year-progress.desktop 
     slots: [dbus-year-progress]
 
 parts:
@@ -40,16 +40,16 @@ parts:
       - libgtk-4-dev
       - gettext
     override-build: |
-      
       craftctl default
       
       mkdir -p $CRAFT_PART_INSTALL/meta/gui
-  
+      
+
       cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.desktop $CRAFT_PART_INSTALL/meta/gui/year-progress.desktop
       cp $CRAFT_PART_SRC/data/com.ixsvf.yearprogress.svg $CRAFT_PART_INSTALL/meta/gui/com.ixsvf.yearprogress.svg
       
-    
+
       sed -i 's|^Icon=.*|Icon=${SNAP}/meta/gui/com.ixsvf.yearprogress.svg|g' $CRAFT_PART_INSTALL/meta/gui/year-progress.desktop
       
-     
+
       rm -f $CRAFT_PART_INSTALL/usr/share/applications/*.desktop
